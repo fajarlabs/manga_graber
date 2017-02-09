@@ -1,0 +1,20 @@
+<ion-view title="Semua Episode" >
+	
+	<!-- Tombol Back -->	
+	<ion-nav-buttons side="left"></ion-nav-buttons>
+
+	<ion-nav-buttons side="secondary">
+		<button style="color:#fff !important;" class="buttons button-icon ion-android-search" ng-click="showFilterBar()"></button>
+	</ion-nav-buttons>
+
+	<!-- Content -->
+	<ion-content class="has-header">
+		<ion-refresher pulling-text="Segarkan" on-refresh="doRefresh()"></ion-refresher>
+		<ion-list>
+			<ion-item ng-repeat="episode in semua_episode" href="#/app/baca_manga/{{episode.href}}">
+				{{episode.innertext}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view title="Daftar Manga" >
+	<!-- Tombol Back -->	
+	<ion-nav-buttons side="left">
+		<button ng-if="visibilityToggle()" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<!--search-bar ng-model="search"></search-bar-->
+
+<ion-nav-buttons side="secondary">
+  <button style="color:#fff !important;" class="buttons button-icon ion-android-search" ng-click="showFilterBar()"></button>
+ </ion-nav-buttons>
+
+	<!-- Content -->
+	<ion-content class="has-header" >
+		<ion-refresher pulling-text="Segarkan" on-refresh="doRefresh()"></ion-refresher>
+		<ion-list>
+			<ion-item divider-collection-repeat collection-repeat="situs in daftar_situs" href="#/app/semua_episode/{{situs.href}}">
+				{{situs.title}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

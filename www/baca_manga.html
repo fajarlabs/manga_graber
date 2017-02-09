@@ -1,0 +1,29 @@
+<ion-view title="Baca Manga" >
+	
+	<!-- Tombol Back -->	
+	<ion-nav-buttons side="left"></ion-nav-buttons>
+
+	<!-- Content -->
+	<ion-content class="has-header">
+	<ion-refresher pulling-text="Segarkan" on-refresh="doRefresh()"></ion-refresher>
+		<div  ng-repeat="manga in baca_manga"  my-repeat-directive>
+
+			<center>
+				<a class="button" style="padding:0 !important;border-width: 0 !important;border-radius: 0 !important;" ng-click="showImage(manga.href)">
+				<img class="pre-show" style="max-width:100%;height:auto;" ng-src="{{manga.href}}">
+				</a>
+			</center>
+			
+		</div>
+
+		<script id="image-modal.html" type="text/ng-template">
+			<div class="modal" ng-click="closeModal()" style="clear:both;">
+				<img ng-src="{{imageSrc}}" class="fullscreen-image" ng-pinch-zoom>
+			</div>
+		</script>
+	</ion-content>
+
+</ion-view>
+
+
+

@@ -1,0 +1,156 @@
+.item-complex .item-content, .item-radio .item-content {
+    position: relative;
+    z-index: 2;
+    padding: 16px 49px 16px 16px;
+    border: none;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+53,474747+53,2b2b2b+76,1c1c1c+91,131313+100 */
+background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 53%, #474747 53%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 53%,#474747 53%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 53%,#474747 53%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+
+    color:#f1f1f1;
+}
+
+
+.bar.bar-stable {
+    border-color: #b2b2b2;
+    background-color: #ff0000 !important;
+    background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+    color: #fff !important;
+}
+
+body, .ionic-body {
+	background-color: #ccc !important;
+}
+
+.bar.bar-stable .title {
+    color: #fff;
+}
+
+.button {
+	color:#fff !important;
+}
+
+.scroll-content {
+  background: url(bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* ------- SEARCH ----*/
+.searchBar {
+	color: #fff;
+	margin: 0 !important;
+	padding: 0;
+}
+.searchBar .icon {
+	font-size: 27px;
+	line-height: 1.2;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+.searchBar .searchTxt {
+	border-bottom: 1px solid #fff;
+	left: 55px;
+	width: calc(100% - 100px);
+	position: fixed;
+	height: calc(100% - 10px);
+}
+.searchBar.numicons2 .searchTxt {
+	width: calc(100% - 135px);
+}
+.searchBar .searchTxt > .bgdiv {
+	background-color: #aaa;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.3;
+}
+.searchBar .searchTxt > .bgtxt {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.searchBar .searchTxt input {
+	background-color: inherit;
+	color: #fff;
+	padding-left: 5px;
+	padding-right:5px;
+}
+
+/* image zoom */
+
+.transparent {
+  background: transparent !important;
+}
+.image-modal {
+  width: 100% !important; 
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+}
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+/* Fix modal backdrop for smaller devices */
+/*
+@media (max-width: 679px) {
+  .active .modal-backdrop-bg {
+    opacity: .5;
+  }
+  .modal-backdrop-bg {
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    background-color: #000;
+    opacity: 0;
+  }
+}*/
+
+/* search */
+.item-input-wrapper {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -moz-box !important;
+    display: -moz-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 0 !important;
+    -moz-box-flex: 1 !important;
+    -moz-flex: 1 0 !important;
+    -ms-flex: 1 0 !important;
+    flex: 1 0 !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    -webkit-align-items: center !important;
+    -moz-align-items: center !important;
+    align-items: center !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important !important;
+        border-top-left-radius: 4px !important;
+        border-top-right-radius: 4px !important;
+        border-bottom-right-radius: 4px !important;
+        border-bottom-left-radius: 4px !important;
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    background: #eee !important;
+}
+
+.placeholder-icon {
+	color:#000 !important;
+}

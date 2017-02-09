@@ -1,0 +1,16 @@
+<ion-view title="Terpopuler">
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="has-header">
+    <ion-refresher pulling-text="Segarkan" on-refresh="doRefresh()"></ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="terpopuler in daftar_terpopuler" href="#/app/lihat_situs/{{terpopuler.site}}">
+        {{terpopuler.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-view>
