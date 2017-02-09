@@ -1,0 +1,4 @@
+> cordova build --release android
+> keytool -genkey -v -keystore mangagraber-release-key.keystore -alias mangagraber -keyalg RSA -keysize 2048 -validity 10000
+> "C:\Program Files\Java\jdk1.8.0_66\bin\jarsigner.exe" -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore mangagraber-release-key.keystore "D:\fajarlabs\kerjaan_luar\MANGAGRABER\platforms\android\build\outputs\apk\android-release-unsigned.apk" mangagraber
+> "D:\android-sdk\build-tools\23.0.2\zipalign.exe" -v 4 "D:\fajarlabs\kerjaan_luar\MANGAGRABER\platforms\android\build\outputs\apk\android-release-unsigned.apk" mangagraber.apk

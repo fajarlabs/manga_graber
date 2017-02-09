@@ -1,4 +1,4 @@
-<ion-view title="Semua Episode" >
+<ion-view title="Episode {{titleSemuaEpisode}}" >
 	
 	<!-- Tombol Back -->	
 	<ion-nav-buttons side="left"></ion-nav-buttons>
@@ -11,7 +11,7 @@
 	<ion-content class="has-header">
 		<ion-refresher pulling-text="Segarkan" on-refresh="doRefresh()"></ion-refresher>
 		<ion-list>
-			<ion-item ng-repeat="episode in semua_episode" href="#/app/baca_manga/{{episode.href}}">
+			<ion-item ng-repeat="episode in semua_episode" href="#/app/baca_manga/{{episode.innertext}}/{{episode.href}}">
 				{{episode.innertext}}
 			</ion-item>
 		</ion-list>

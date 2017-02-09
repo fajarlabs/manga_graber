@@ -38,7 +38,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
     /* menampilkan semua episode manga di situs yang di pilih */
     .state('app.semua_episode', {
-      url: "/semua_episode/:url_situs",
+      url: "/semua_episode/:title/:url_situs",
       views: {
         'menuContent' :{
           templateUrl: "semua_episode.html",
@@ -49,7 +49,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
     /* menampilkan daftar manga yang ada di situs tersebut */
     .state('app.lihat_situs', {
-      url: "/lihat_situs/:url_situs",
+      url: "/lihat_situs/:title/:url_situs",
       views: {
         'menuContent' :{
           templateUrl: "lihat_situs.html",
@@ -60,7 +60,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
     /* baca manga */
     .state('app.baca_manga', {
-      url: "/baca_manga/:url_situs",
+      url: "/baca_manga/:title/:url_situs",
       views: {
         'menuContent' :{
           templateUrl: "baca_manga.html",

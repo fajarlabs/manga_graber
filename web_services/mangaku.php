@@ -123,7 +123,7 @@ function getEpisode($url="") {
 
 function getAllSites() {
 	$sites = array();
-	$sites[] = array("title" => "Mangaku", "site" => enc_url("http://mangaku.web.id/daftar-komik-bahasa-indonesia/","/"), "id" => 1);
+	$sites[] = array("title" => "mangaku", "site" => enc_url("http://mangaku.web.id/daftar-komik-bahasa-indonesia/","/"), "id" => 1);
 
 	return $sites;
 }
@@ -132,7 +132,7 @@ function getAllSites() {
 
 function getPopularSites() {
 	$sites = array();
-	$sites[] = array("title" => "Mangaku", "site" => enc_url("http://mangaku.web.id/daftar-komik-bahasa-indonesia/","/"), "id" => 1);
+	$sites[] = array("title" => "mangaku", "site" => enc_url("http://mangaku.web.id/daftar-komik-bahasa-indonesia/","/"), "id" => 1);
 
 	return $sites;
 }

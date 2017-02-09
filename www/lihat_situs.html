@@ -1,4 +1,4 @@
-<ion-view title="Daftar Manga" >
+<ion-view title="{{titleCategory}}" >
 	<!-- Tombol Back -->	
 	<ion-nav-buttons side="left">
 		<button ng-if="visibilityToggle()" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
@@ -13,7 +13,7 @@
 	<ion-content class="has-header" >
 		<ion-refresher pulling-text="Segarkan" on-refresh="doRefresh()"></ion-refresher>
 		<ion-list>
-			<ion-item divider-collection-repeat collection-repeat="situs in daftar_situs" href="#/app/semua_episode/{{situs.href}}">
+			<ion-item divider-collection-repeat collection-repeat="situs in daftar_situs" href="#/app/semua_episode/{{situs.title}}/{{situs.href}}">
 				{{situs.title}}
 			</ion-item>
 		</ion-list>

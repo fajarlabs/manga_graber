@@ -84,6 +84,8 @@ angular.module('starter.controllers', ['ionic','jett.ionic.filter.bar'])
 
 .controller('SemuaEpisodeCtrl', function($scope,$http,$stateParams,$ionicPopup, $timeout, $ionicLoading, $ionicHistory,$ionicSideMenuDelegate, $ionicFilterBar) { 
 
+  $scope.titleSemuaEpisode = $stateParams.title;
+
 	$scope.showFilterBar = function () {
       filterBar = $ionicFilterBar.show({
         items: $scope.semua_episode,
@@ -92,7 +94,7 @@ angular.module('starter.controllers', ['ionic','jett.ionic.filter.bar'])
         }
         //filterProperties : 'first_name'
       });
-    }
+  };
 
 	$scope.doRefresh = function() {
 		$http.get(base_url+'?action=getMangaAllEpisode&site='+$stateParams.url_situs).
@@ -129,7 +131,7 @@ angular.module('starter.controllers', ['ionic','jett.ionic.filter.bar'])
 
 .controller('BacaMangaCtrl', function($scope,$http,$stateParams,$ionicPopup, $timeout, $ionicLoading, $ionicHistory,$ionicSideMenuDelegate, $ionicFilterBar,$ionicModal) { 
 
-
+    $scope.titleManga = $stateParams.title;
     $ionicModal.fromTemplateUrl('image-modal.html', {
       scope: $scope,
       animation: 'slide-in-up'
@@ -216,31 +218,29 @@ angular.module('starter.controllers', ['ionic','jett.ionic.filter.bar'])
       });
     }
 
-	$scope.doRefresh = function () {
+    $scope.titleCategory = $stateParams.title;
 
-		$http.get(base_url+'?action=comicCategory&site='+$stateParams.url_situs).
-		success(function(data, status, headers, config) {
-			if(countJSON(data) > 0)
-				$scope.daftar_situs = data;
-			else
-				$scope.showAlert("Sorry brother, data tidak ada!");
-
-			$scope.hideLoading();
-			$scope.$broadcast('scroll.refreshComplete');
-		}).error(function(data, status, headers, config) { 
-			$scope.showAlert("Sorry brother, gagal");
-			$scope.hideLoading();
-			$scope.$broadcast('scroll.refreshComplete');
-		});
+	  $scope.doRefresh = function () {
+    		$http.get(base_url+'?action=comicCategory&site='+$stateParams.url_situs).
+    		success(function(data, status, headers, config) {
+    			if(countJSON(data) > 0)
+    				$scope.daftar_situs = data;
+    			else
+    				$scope.showAlert("Sorry brother, data tidak ada!");
+    			$scope.hideLoading();
+    			$scope.$broadcast('scroll.refreshComplete');
+    		}).error(function(data, status, headers, config) { 
+    			$scope.showAlert("Sorry brother, gagal");
+    			$scope.hideLoading();
+    			$scope.$broadcast('scroll.refreshComplete');
+    		});
 	}
 
 	/* Toogle */
 
-    $scope.toggleLeft = function() {
-        $ionicSideMenuDelegate.toggleLeft();
-    };
-
-	$scope.data=["JavaScript","Java","Ruby","Python"];
+  $scope.toggleLeft = function() {
+      $ionicSideMenuDelegate.toggleLeft();
+  };
 
 	$scope.search = "CARI MANGA";
 

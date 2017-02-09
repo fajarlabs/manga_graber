@@ -7,7 +7,7 @@
   <ion-content class="has-header">
     <ion-refresher pulling-text="Segarkan" on-refresh="doRefresh()"></ion-refresher>
     <ion-list>
-      <ion-item ng-repeat="terpopuler in daftar_terpopuler" href="#/app/lihat_situs/{{terpopuler.site}}">
+      <ion-item ng-repeat="terpopuler in daftar_terpopuler" href="#/app/lihat_situs/{{terpopuler.title}}/{{terpopuler.site}}">
         {{terpopuler.title}}
       </ion-item>
     </ion-list>
