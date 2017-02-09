@@ -8,7 +8,7 @@ Download nodejs first. If no please download here https://nodejs.org/en/ .
 
 ## Versioning
 
-Version 1.0.1  
+Version 1.0.2  
 
 ## Authors
 
